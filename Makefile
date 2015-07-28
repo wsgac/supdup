@@ -8,7 +8,7 @@
 #		TERMINFO must be defined and the corresponding library
 #		(-ltermcap or -lterminfo) must be linked in.
 # DEBUG
-PREFIX=/usr/local
+PREFIX ?= /usr/local
 
 supdup: supdup.c termcaps.h
 	cc -g -o supdup -DTERMCAP supdup.c -ltermcap
