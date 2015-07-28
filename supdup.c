@@ -73,6 +73,11 @@
 #include <unistd.h>
 #endif
 
+#ifdef __NetBSD__
+#include <sys/time.h>
+#include <sys/select.h>
+#endif
+
 extern char *tgetstr();
 
 #include "termcaps.h"		/* Get table of term caps we want */
